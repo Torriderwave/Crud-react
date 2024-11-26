@@ -10,14 +10,24 @@ import axios from "axios";
 const Container = styled.div`
   width: 100%;
   max-width: 800px;
-  margin-top: 20px;
+  margin: 20px auto; /* Centra horizontalmente y ajusta el espaciado superior */
   display: flex;
-  felx-direction: column;
-  align-items: center;
-  gap: 10px;
-  `;
+  flex-direction: column; /* Corrige el error tipográfico */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 20px; /* Mayor espacio entre los elementos */
+  padding: 20px; /* Añade un padding interno para que el contenido no esté pegado a los bordes */
+  background-color: #f9f9f9; /* Color de fondo suave */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+`;
 
-  const Title = styled.h2``;
+const Title = styled.h2`
+  font-size: 24px; /* Ajusta el tamaño de la fuente para resaltar el título */
+  color: #333; /* Un color más fuerte para el texto */
+  margin-bottom: 50px; /* Añade un pequeño espacio inferior */
+  text-align: center; /* Centra el texto */
+`;
+
 
 function App() {
   const [users, setUsers] = useState([]);
